@@ -1,0 +1,152 @@
+/* Global Styles */
+:root {
+  --font-family: Arial, sans-serif;
+  --color-black: black;
+  --color-white: white;
+  --color-gray-light: #E6E7E8;
+  --color-gray-dark: #BDBFC1;
+  --color-gray-darker: #A9ABAE;
+  --font-size-base: 15px;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-gray-light);
+  margin: 0;
+  padding: 0;
+  height: 100%;  /* Membuat body memanfaatkan seluruh tinggi */
+}
+
+p {
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+/* Wrapper Styles */
+#wrapper {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#page-wrapper {
+  padding: 20px 30px;  /* Menambahkan padding lebih besar agar konten tidak terlalu rapat */
+  background-color: var(--color-gray-light);
+  box-sizing: border-box;
+  min-height: calc(100vh - 120px);  /* Menggunakan 100vh minus tinggi footer dan navbar */
+  margin-bottom: 0;  /* Menghilangkan margin bawah */
+}
+
+@media (min-width: 768px) {
+  #page-wrapper {
+    position: inherit;
+    margin-left: 250px;
+    padding: 20px 30px;
+    border-left: 1px solid var(--color-gray-darker);
+    min-height: calc(100vh - 120px);  /* Sesuaikan tinggi halaman */
+  }
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #000271;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-brand {
+  margin-left: 5px; /* Memberikan jarak agar tidak terlalu menempel ke kiri */
+  padding-top: 30px;  /* Menurunkan teks sedikit lebih ke bawah */
+  font-size: 20px; /* Ukuran font bisa disesuaikan */
+}
+
+.navbar-custom {
+  background: #BDBFC1;
+  font-family: Arial;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: none;
+}
+.navbar-custom .navbar-brand {
+  color: black;
+}
+.navbar-custom:hover,
+.navbar-custom:focus,
+.navbar-custom:active,
+.navbar-custom.active {
+  color: white;
+}
+
+.navbar-top-links {
+  margin: 0 auto 0 auto;
+}
+
+.navbar-top-links li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.navbar-top-links li:last-child {
+  margin-right: 0;
+}
+
+.navbar-top-links li a {
+  padding: 15px;
+  min-height: 50px;
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  background-color: var(--color-gray-light);
+  padding: 15px;
+  margin: 0;
+}
+
+.sidebar .sidebar-nav.navbar-collapse {
+  padding: 0;
+}
+
+.sidebar ul li {
+  border-bottom: 1px solid var(--color-gray-darker);
+  margin-bottom: 4px;
+  padding-left: 15px;
+}
+
+.sidebar ul li a.active {
+  background-color: red;
+  color: var(--color-white);
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    z-index: 1;
+    position: absolute;
+    width: 250px;
+    margin-top: 80px;
+  }
+}
+
+/* Footer Styles */
+footer {
+  color: var(--color-black);
+  font-size: 1px;
+  padding: 1px 0;
+  background-color: var(--color-gray-dark);
+  margin-top: 0;  /* Menghilangkan margin atas agar footer lebih dekat dengan konten */
+}
+
+footer .footer-below {
+  padding: 1px 2; 
+  background-color: var(--color-gray-light);
+}
